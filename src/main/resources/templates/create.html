@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="createCarTable">
+    <form th:action="@{/create-car}" method="POST">
+
+        <label for="CarID">ID</label>
+        <input  th:field="*{newCar.carId}"  id="CarID" name="CarID" type="text" placeholder="Insert CarID" required>
+
+        <label for="carBrand">Mærke</label>
+        <input th:field="*{newCar.carBrand}" id="carBrand" name="carBrand" type="text" placeholder="Insert carBrand" required>
+
+        <label for="carModel">Model</label>
+        <input th:field="*{newCar.carModel}" id="carModel" name="carModel" type="text" placeholder="Insert carModel" required>
+
+        <label for="carYear">Årgang</label>
+        <input th:field="*{newCar.carYear}" id="carYear" name="carYear" type="text" placeholder="Insert carYear" required>
+
+        <div id="btn-field">
+            <a href="/overview"><button id="submitBtn" name="subBtn" type="submit" >Submit</button></a>
+        </div>
+    </form>
+</div>
+</div>
+</body>
+</html>
